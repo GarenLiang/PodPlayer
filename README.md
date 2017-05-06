@@ -1,2 +1,2 @@
 # PodPlayer
-Mac PodPlayer App with Swift 3 :zap::smirk::radio::headphones:
+Mac PodPlayer App with Swift 3 :zap::smirk::radio::headphones::no_mouth:
