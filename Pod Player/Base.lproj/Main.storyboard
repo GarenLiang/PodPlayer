@@ -699,10 +699,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="659"/>
         </scene>
-        <!--View Controller-->
+        <!--Podcasts View Controller-->
         <scene sceneID="zlX-PA-TIy">
             <objects>
-                <viewController id="Vmr-YT-hwW" sceneMemberID="viewController">
+                <viewController id="Vmr-YT-hwW" customClass="PodcastsViewController" customModule="Pod_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="jsc-UE-cMB">
                         <rect key="frame" x="0.0" y="0.0" width="312" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -716,6 +716,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="addPodcastClicked:" target="Vmr-YT-hwW" id="Eas-76-7Mf"/>
+                                </connections>
                             </button>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzR-NY-oqq">
                                 <rect key="frame" x="5" y="31" width="302" height="22"/>
@@ -731,7 +734,7 @@
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mom-Q0-Lsf">
                                 <rect key="frame" x="0.0" y="55" width="312" height="245"/>
                                 <clipView key="contentView" id="Sdi-Ga-U7M">
-                                    <rect key="frame" x="1" y="23" width="310" height="221"/>
+                                    <rect key="frame" x="1" y="0.0" width="310" height="244"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="KCG-U1-Bt6" viewBased="YES" id="lEb-aI-Ewr">
@@ -805,6 +808,9 @@
                             <constraint firstAttribute="bottom" secondItem="UjT-Ib-ci2" secondAttribute="bottom" constant="5" id="zkN-eX-10L"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="podcastURLTextField" destination="FzR-NY-oqq" id="Jzd-hw-Icg"/>
+                    </connections>
                 </viewController>
                 <customObject id="WLx-m9-SAF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
