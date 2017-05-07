@@ -14,6 +14,6 @@ class Parser {
         
         print(xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text)
         
-        return (xml["rss"]["channel"]["title"].element?.text, xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text)
+        return (xml["rss"]["channel"]["title"].element?.text, xml["rss"]["channel"]["itunes:image"].element?.attribute(by: "href")?.text    )
     }
 }
