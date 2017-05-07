@@ -12,6 +12,7 @@
 		49237FD71EBD5D5200B11FB8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49237FD61EBD5D5200B11FB8 /* Assets.xcassets */; };
 		49237FDA1EBD5D5200B11FB8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49237FD81EBD5D5200B11FB8 /* Main.storyboard */; };
 		4925A2001EBEDC6600E4799B /* PodcastsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4925A1FF1EBEDC6600E4799B /* PodcastsViewController.swift */; };
+		4969E9D11EBEF4C100A1F759 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4969E9D01EBEF4C100A1F759 /* Parser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		49237FD91EBD5D5200B11FB8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49237FDB1EBD5D5200B11FB8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4925A1FF1EBEDC6600E4799B /* PodcastsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PodcastsViewController.swift; sourceTree = "<group>"; };
+		4969E9D01EBEF4C100A1F759 /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				49237FCF1EBD5D5200B11FB8 /* AppDelegate.swift */,
 				4925A1FF1EBEDC6600E4799B /* PodcastsViewController.swift */,
+				4969E9D01EBEF4C100A1F759 /* Parser.swift */,
 				49237FD61EBD5D5200B11FB8 /* Assets.xcassets */,
 				49237FD81EBD5D5200B11FB8 /* Main.storyboard */,
 				49237FDB1EBD5D5200B11FB8 /* Info.plist */,
@@ -135,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4969E9D11EBEF4C100A1F759 /* Parser.swift in Sources */,
 				49237FD51EBD5D5200B11FB8 /* Pod_Player.xcdatamodeld in Sources */,
 				4925A2001EBEDC6600E4799B /* PodcastsViewController.swift in Sources */,
 				49237FD01EBD5D5200B11FB8 /* AppDelegate.swift in Sources */,
