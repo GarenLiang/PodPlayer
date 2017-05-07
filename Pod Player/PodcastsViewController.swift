@@ -28,7 +28,7 @@ class PodcastsViewController: NSViewController {
                 } else {
                     if data != nil {
                         let parser = Parser()
-                        parser.getPodcastMetaData(data: data!)
+                        let info = parser.getPodcastMetaData(data: data!)
                     }
                 }
             }.resume()
