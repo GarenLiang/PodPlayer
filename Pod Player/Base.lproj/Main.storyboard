@@ -757,7 +757,7 @@
                                                     </textFieldCell>
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
-                                                        <tableCellView id="Ujn-nG-QSp">
+                                                        <tableCellView identifier="podcastcell" id="Ujn-nG-QSp">
                                                             <rect key="frame" x="1" y="1" width="307" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
@@ -778,6 +778,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Vmr-YT-hwW" id="6P6-jl-jiw"/>
+                                                <outlet property="delegate" destination="Vmr-YT-hwW" id="SiN-z8-UYS"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -810,6 +814,7 @@
                     </view>
                     <connections>
                         <outlet property="podcastURLTextField" destination="FzR-NY-oqq" id="Jzd-hw-Icg"/>
+                        <outlet property="tableView" destination="lEb-aI-Ewr" id="sk6-cG-IAy"/>
                     </connections>
                 </viewController>
                 <customObject id="WLx-m9-SAF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
