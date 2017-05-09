@@ -49,9 +49,10 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource, NSTableVi
                         let parser = Parser()
                         let info = parser.getPodcastMetaData(data: data!)
                         
+                        if self.podcastExists(rssURL: self.podcastURLTextField.stringValue) {
                         if let context = (NSApplication.shared().delegate as?
                             AppDelegate)?.persistentContainer.viewContext
- {
+                    {
                             let podcast = Podcast(context: context)
                             
                             podcast.rssURL = self.podcastURLTextField.stringValue
@@ -60,6 +61,7 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource, NSTableVi
                             
                             (NSApplication.shared().delegate as? AppDelegate)?.saveAction(nil)
                             self.getPodcasts()
+                            }
                         }
                     }
                 }
@@ -68,6 +70,25 @@ class PodcastsViewController: NSViewController, NSTableViewDataSource, NSTableVi
         }
         
     }
+    
+    func podcastExists(rssURL:String) -> Bool {
+        if let context = (NSApplication.shared().delegate as? AppDelegate)?.persistentContainer.viewContext
+            {
+            let fetchy = Podcast.fetchRequest() as NSFetchRequest<Podcast>
+            fetchy.predicate = NSPredicate(format: "rssURL == %@", rssURL)
+            
+            do {
+                let matchingPodcasts = try context.fetch(fetchy)
+                if matchingPodcasts.count >= 1 {
+                    return true
+                } else {
+                    return false
+                }
+            } catch {}
+        }
+        return false
+    }
+    
     func numberOfRows(in tableView: NSTableView) -> Int {
         return podcasts.count
     }
