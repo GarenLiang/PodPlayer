@@ -678,10 +678,10 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--Split View Controller-->
+        <!--The Split Controller-->
         <scene sceneID="WCj-d8-FSV">
             <objects>
-                <splitViewController id="f2M-OD-Dsj" sceneMemberID="viewController">
+                <splitViewController id="f2M-OD-Dsj" customClass="TheSplitController" customModule="Pod_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <splitViewItems>
                         <splitViewItem id="9ad-Ue-nC9"/>
                         <splitViewItem id="xxO-ac-Jqe"/>
@@ -691,6 +691,8 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </splitView>
                     <connections>
+                        <outlet property="episodesItem" destination="xxO-ac-Jqe" id="zPP-l8-vPw"/>
+                        <outlet property="podcastsItem" destination="9ad-Ue-nC9" id="wwe-nI-Cij"/>
                         <segue destination="Vmr-YT-hwW" kind="relationship" relationship="splitItems" id="Gzg-5m-MaV"/>
                         <segue destination="p6X-9c-nxp" kind="relationship" relationship="splitItems" id="4k9-Jb-vrg"/>
                     </connections>
@@ -704,11 +706,11 @@
             <objects>
                 <viewController id="Vmr-YT-hwW" customClass="PodcastsViewController" customModule="Pod_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="jsc-UE-cMB">
-                        <rect key="frame" x="0.0" y="0.0" width="312" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="UjT-Ib-ci2">
-                                <rect key="frame" x="-1" y="-2" width="314" height="32"/>
+                                <rect key="frame" x="-1" y="-2" width="202" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="UOG-o0-Ybo"/>
                                 </constraints>
@@ -721,7 +723,7 @@
                                 </connections>
                             </button>
                             <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FzR-NY-oqq">
-                                <rect key="frame" x="5" y="31" width="302" height="22"/>
+                                <rect key="frame" x="5" y="31" width="190" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="C62-3i-yXh"/>
                                 </constraints>
@@ -732,19 +734,19 @@
                                 </textFieldCell>
                             </textField>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mom-Q0-Lsf">
-                                <rect key="frame" x="0.0" y="55" width="312" height="245"/>
+                                <rect key="frame" x="0.0" y="55" width="200" height="245"/>
                                 <clipView key="contentView" id="Sdi-Ga-U7M">
-                                    <rect key="frame" x="1" y="0.0" width="310" height="244"/>
+                                    <rect key="frame" x="1" y="0.0" width="198" height="244"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="KCG-U1-Bt6" viewBased="YES" id="lEb-aI-Ewr">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="221"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="198" height="221"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="307" minWidth="40" maxWidth="1000" id="kcN-OI-Uq0">
+                                                <tableColumn width="195" minWidth="40" maxWidth="1000" id="kcN-OI-Uq0">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" title="Podcast">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -758,11 +760,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="podcastcell" id="Ujn-nG-QSp">
-                                                            <rect key="frame" x="1" y="1" width="307" height="17"/>
+                                                            <rect key="frame" x="1" y="1" width="195" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5RN-Ac-7q2">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="307" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="195" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="IVx-3G-0pg">
                                                                         <font key="font" metaFont="system"/>
@@ -785,6 +787,9 @@
                                         </tableView>
                                     </subviews>
                                 </clipView>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="anM-Ej-gCD"/>
+                                </constraints>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="un2-Ng-MFP">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
@@ -794,7 +799,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <tableHeaderView key="headerView" id="KCG-U1-Bt6">
-                                    <rect key="frame" x="0.0" y="0.0" width="310" height="23"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="198" height="23"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
                             </scrollView>
@@ -821,10 +826,10 @@
             </objects>
             <point key="canvasLocation" x="585" y="368"/>
         </scene>
-        <!--View Controller-->
+        <!--Episodes View Controller-->
         <scene sceneID="V11-rM-CUt">
             <objects>
-                <viewController id="p6X-9c-nxp" sceneMemberID="viewController">
+                <viewController id="p6X-9c-nxp" customClass="EpisodesViewController" customModule="Pod_Player" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Tvm-oo-eay">
                         <rect key="frame" x="0.0" y="0.0" width="525" height="308"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -853,6 +858,9 @@
                                 <buttonCell key="cell" type="push" title="Delete" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="6dh-EW-jKX">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
+                                    <connections>
+                                        <action selector="deleteClicked:" target="p6X-9c-nxp" id="RJO-U0-uqu"/>
+                                    </connections>
                                 </buttonCell>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CMl-6j-Fjm">
@@ -861,6 +869,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="pausePlayClicked:" target="p6X-9c-nxp" id="oUR-UW-FPB"/>
+                                </connections>
                             </button>
                             <scrollView wantsLayer="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEe-Wb-Fio">
                                 <rect key="frame" x="0.0" y="0.0" width="525" height="178"/>
@@ -909,6 +920,10 @@
                                                     </prototypeCellViews>
                                                 </tableColumn>
                                             </tableColumns>
+                                            <connections>
+                                                <outlet property="dataSource" destination="p6X-9c-nxp" id="NnR-Dn-q0J"/>
+                                                <outlet property="delegate" destination="p6X-9c-nxp" id="M95-PD-fOK"/>
+                                            </connections>
                                         </tableView>
                                     </subviews>
                                 </clipView>
@@ -942,6 +957,12 @@
                             <constraint firstAttribute="bottom" secondItem="BEe-Wb-Fio" secondAttribute="bottom" id="vti-US-IYe"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="KYU-bu-taZ" id="W9e-jE-qm3"/>
+                        <outlet property="pausePlayButton" destination="CMl-6j-Fjm" id="PKO-bP-PdY"/>
+                        <outlet property="tableView" destination="fbl-XD-qbi" id="ZsC-6f-pH3"/>
+                        <outlet property="titleLabel" destination="hyn-js-2MP" id="lEf-mm-75y"/>
+                    </connections>
                 </viewController>
                 <customObject id="yLR-uH-6O2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
